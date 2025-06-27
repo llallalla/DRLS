@@ -1,0 +1,8 @@
+alpha: 0.1
+beta: 0.01
+gamma: 0.0001
+epochs_first: 100
+epochs_second: 50
+lr: 0.001
+batch_size: 128
+z_dim: 512
