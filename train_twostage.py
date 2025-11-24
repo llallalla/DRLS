@@ -222,7 +222,7 @@ def main(args,file_path):
         model_first = VAE_consist(d_list,args.z_dim,classes_num)
         model_first = model_first.to(torch.device('cuda' if torch.cuda.is_available()
                                       else 'cpu'))
-        model_second = get_model_second(d_list,num_classes=classes_num,z_dim=args.z_dim,adj=adj,inp=inp,rand_seed=0) #得到模型
+        model_second = get_model_second(d_list,num_classes=classes_num,z_dim=args.z_dim,adj=adj,inp=inp,rand_seed=0) 
 
         loss_model = Loss()
         optimizer_first =  Adam(model_first.parameters(), lr=args.lr)
