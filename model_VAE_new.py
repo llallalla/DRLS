@@ -420,7 +420,7 @@ class VGAE_label_embedding(nn.Module):
         return A_pred, Z , mean ,var
 
 def dot_product_decode(Z):
-    A_pred = torch.sigmoid(torch.matmul(Z,Z.t())) #计算潜在表示Z的点积，并通过sigmoid函数将结果映射到(0,1)区间，表示边的存在概率
+    A_pred = torch.sigmoid(torch.matmul(Z,Z.t())) 
     return A_pred
 
 class GIN_MLP(nn.Module):
